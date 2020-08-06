@@ -1,6 +1,11 @@
 # Apple Performa 638CD
 Luckily, this one worked perfectly when I got it.  It had the [standard specs from EveryMac](https://everymac.com/systems/apple/mac_performa/specs/mac_performa_638cd.html), but I have, so far, upgraded to 36 MB RAM and replaced the hard drive with an 8 GB CompactFlash.
 
+## Replacing the Hard Drive
+The Performa 638CD shipped with an Apple-branded 350 MB 3.5" IDE hard drive.  Mine works (and sounds) great, but I did not want to push my luck.  It is also a bit slow, so I decided to replace it with an 8 GB CompactFlash using a CF->IDE adapter.  The Performa/Quadra/Centris 630 family was the first to use IDE drives, which were cheaper than SCSI, which makes changing it out nowadays much more convenient.  The problem is that the drive formatting program that ships with System 7.1 only works with Apple hard drives.  Macintosh Garden has [a patched version](https://macintoshgarden.org/apps/apple-hd-sc-setup-753-patch) that will allegedly work with other drives, but I did not have a good way to get that onto my system.
+
+I tried a few things that did not work to create an HFS partition on the CF card.  First, I plugged my USB CF reader into a fairly recent MacBook Pro running Mac OS 10.15 and ran the Disk Utility.  This is how I learned that HFS+ and HFS are not the same thing.  Do not bother trying this approach.  It is possible that a similar approach could work in a PowerPC G3 running OS 8, but I did not have one sitting around to try. What finally worked for me was installing `hfsutils` on an Ubuntu 20.04 computer and using `gparted` to create HFS partitions on my CompactFlash card.  After that, I was able to boot off the System 7 CD-ROM and install System 7 with no problems.
+
 ## Adding Applications
 Trying to get additional software on the thing is a bit of a challenge.  I do not have any other Apple devices with floppy drives.  The only machine I _do_ have with a floppy drive is my [PII 350 running Windows 2000](e4200.md), which does not exactly know how to write HFS formatted floppies.  Even getting software onto that is a bit of pain, but at least I can transfer things to it with a USB flash drive.  Not so with the Performa.
 
