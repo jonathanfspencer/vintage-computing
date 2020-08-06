@@ -1,0 +1,2 @@
+# Apple Performa 638CD
+Luckily, this one worked perfectly when I got it.  It had the [standard specs from EveryMac](https://everymac.com/systems/apple/mac_performa/specs/mac_performa_638cd.html), but I have, so far, upgraded to 36 MB RAM and replaced the hard drive with an 8 GB CompactFlash.
